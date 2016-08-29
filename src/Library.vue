@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="library">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
   </div>
@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
 </style>

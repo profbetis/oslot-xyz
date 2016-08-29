@@ -1,0 +1,20 @@
+html {
+  background: #444;
+  color: #fa0;
+
+  letter-spacing: 0.03em;
+
+  text-align: center;
+
+  margin: 0px;
+  padding: 0px;
+
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+}

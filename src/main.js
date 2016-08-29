@@ -1,7 +1,19 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Library from './Library.vue'
+import SiteHeader from './SiteHeader.vue'
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+
+  components: {
+    Library,
+    SiteHeader
+  },
+
+  render (h) {
+    return h({},[
+      SiteHeader,
+      Library
+    ])
+  }
 })
