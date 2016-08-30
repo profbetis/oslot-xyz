@@ -1,13 +1,17 @@
-<template>
+<template id="library-template">
   <div id="library">
-    <img src="./assets/logo.png">
+    <img src='./assets/logo.png'>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+
 export default {
-  data () {
+  template: '#library-template',
+
+  data: () => {
     return {
       msg: 'Hello Vue 2.0!'
     }

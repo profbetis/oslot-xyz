@@ -1,13 +1,17 @@
-<template>
-  <div id='site-header'>
+<template id="site-header-template">
+  <div id="site-header">
     <h1>OSLOT</h1>
     <h4>An OSL material depot</h4>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+
 export default {
-  data () {
+  template: '#site-header-template',
+
+  data: () => {
     return {
       shaderCount: 3862,
       userCount: 19140,
