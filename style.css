@@ -1,8 +1,8 @@
 html {
-  background: #444;
-  color: #fa0;
+  background: #404040;
+  color: #f0a000;
 
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 
   text-align: center;
 
@@ -15,6 +15,55 @@ body{
   margin: 0px;
   padding: 0px;
 }
-
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  line-height: 1em;
+  font-weight: 200;
+}
 h1 {
+  font-size: 1.5em;
+  color: #f0b000;
+}
+h2 {
+  font-size: 1.2em;
+  color: #f0b000;
+}
+h3 {
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+.flexbox{
+  display: flex;
+}
+
+input{
+  color: #a0a0a0;
+  background: #202020;
+  border: none;
+  outline: 1px solid #606060;
+  padding: 0.25em 0.5em;
+  width: auto;
+}
+
+.label-switch{
+  color: #a0a0a0;
+  background: #202020;
+  border: none;
+  outline: 1px solid #606060;
+  font-family: inherit;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+.label-switch:hover{
+  color: #c0c0c0;
+  background: #282828;
+  cursor: pointer;
+}
+.label-switch.active{
+  background: #404040;
+  color: #f0b000;
+  outline-color: #f0b000;
+  z-index: 100;
 }

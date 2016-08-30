@@ -2,7 +2,8 @@
 import Vue from 'vue'
 
 import SiteHeader from './SiteHeader.vue'
-import Library from './Library.vue'
+import Tabs from './Tabs.vue'
+import Browse from './browse/Browse.vue'
 
 export default {
   name: 'app',
@@ -11,7 +12,8 @@ export default {
 
   components: {
     'site-header': SiteHeader,
-    'library': Library
+    'tabs': Tabs,
+    'browse': Browse
   },
 
   data: () => {
@@ -25,7 +27,10 @@ export default {
   <div id="app">
 
     <site-header></site-header>
-    <library></library>
+
+    <tabs></tabs>
+
+    <browse></browse>
 
   </div>
 </template>

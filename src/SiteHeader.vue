@@ -1,10 +1,3 @@
-<template id="site-header-template">
-  <div id="site-header">
-    <h1>OSLOT</h1>
-    <h4>An OSL material depot</h4>
-  </div>
-</template>
-
 <script>
 import Vue from 'vue'
 
@@ -25,21 +18,32 @@ export default {
 }
 </script>
 
+
+
+<template id="site-header-template">
+  <div id="site-header">
+    <h1>OSLOT</h1>
+    <h4>An OSL material depot</h4>
+  </div>
+</template>
+
+
+
 <style>
 #site-header{
-  background: #333;
-  color: #ccc;
+  background: #383838;
+  color: #c0c0c0;
 
   font-weight: 200;
 
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
 
-  border-bottom: 1px solid #fa0;
+  border-bottom: 1px solid #f0b000;
 }
 
 #site-header h1{
-  color: #fa0;
+  color: #f0b000;
   font-size: 2em;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
@@ -47,7 +51,7 @@ export default {
   margin: 0;
 }
 #site-header h4{
-  color: #aaa;
+  color: #c0c0c0;
   font-size: 0.8em;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
