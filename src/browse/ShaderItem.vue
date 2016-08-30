@@ -16,6 +16,18 @@ export default {
 
   data: () => {
     return {
+      allPrograms: [
+        'Arnold',
+        'Blender',
+        'Octane',
+        'Vray'
+      ]
+    }
+  },
+
+  methods: {
+    isCompatibleWith: function (which){
+      return (this.compatibility.indexOf(which) > -1) ? true : false
     }
   }
 }
@@ -29,11 +41,22 @@ export default {
     </div>
 
     <div class='shader-info'>
-      <h1>{{ name }}</h1>
-      <h3>by {{ author }}</h3>
-      <h3>{{ categories }}</h3>
-      <h2>{{ rating }} Stars</h2>
-      <h3>{{ compatibility }}</h3>
+      <div class='name'>{{ name }}</div>
+      <div class='author'>by {{ author }}</div>
+      <div class='categories'>
+        <span class='categories-category'
+        v-for='(category, index) in categories'>
+          {{ index === 0 ? '' : '»'}} {{ category }}
+        </span>
+      </div>
+      <div class='rating'>{{ rating }} Stars</div>
+      <div class='compatibility'>
+        <div v-bind:class="['compatibility-icon', isCompatibleWith(program) ? 'is-compatible' : '']"
+        v-for='program in allPrograms'>
+          {{ program }}
+        </div>
+      </div>
+      <div class='download'>☇</div>
     </div>
 
   </div>
@@ -52,26 +75,86 @@ export default {
   margin: 0;
   padding: 0;
 }
-#shader-view .shader-info{
-  padding: 1em;
-  padding-top: 0.25em;
-  margin: 0;
-}
 .shader-item img{
   width: 100%;
   margin: 0em;
   object-fit: cover;
 }
-.shader-item h1,
-.shader-item h3{
+
+#shader-view .shader-info{
+  position: relative;
+  padding: 1em;
+  padding-top: 0.25em;
+  margin: 0;
+}
+.shader-item div{
+  margin: 0;
+  padding: 0;
+}
+.shader-item .name,
+.shader-item .author,
+.shader-item .categories{
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0em;
 }
-.shader-item h1{
-  color: #c0c0c0;
+.shader-item .name{
+  font-size: 1.3em;
+  line-height: 1em;
+  margin-top: 0.125em;
+  color: #e0e0e0;
 }
-.shader-item h3{
+.shader-item .author{
+  font-size: 0.8em;
   color: #a0a0a0;
+}
+.shader-item .categories{
+  font-size: 1em;
+  color: #c0c0c0;
+  margin-bottom: 0.25em;
+}
+.shader-item .rating{
+  padding: 0.25em;
+  text-align: center;
+  outline: 1px dotted #f0b000;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+}
+.shader-item .compatibility{
+  display: inline-flex;
+  position: static;
+}
+.shader-item .compatibility-icon{
+  color: #808080;
+  outline: 1px dotted #606060;
+  margin-right: 0.5em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.shader-item .compatibility-icon.is-compatible{
+  color: #c0c0c0;
+  outline-color: #f0b000;
+}
+.shader-item .download{
+  color: #f0b000;
+  outline: 1px solid #606060;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2em;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+  margin-top: 0.25em;
+  cursor: pointer;
+}
+.shader-item .download:hover{
+  background: #404040;
 }
 </style>

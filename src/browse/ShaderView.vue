@@ -37,8 +37,8 @@ export default {
           author: 'profbetis',
           rating: 4.2,
           compatibility: [
-            'Octane',
             'Arnold',
+            'Octane',
             'Vray'
           ]
         },
@@ -52,8 +52,8 @@ export default {
           author: 'profbetis',
           rating: 3.9,
           compatibility: [
-            'Octane',
-            'Blender'
+            'Blender',
+            'Octane'
           ]
         },
         {
@@ -79,9 +79,9 @@ export default {
           author: 'profbetis',
           rating: 4.8,
           compatibility: [
-            'Octane',
-            'Blender',
             'Arnold',
+            'Blender',
+            'Octane',
             'Vray'
           ]
         },
@@ -95,8 +95,8 @@ export default {
           author: 'rikk_the_gajin',
           rating: 3.7,
           compatibility: [
-            'Octane',
-            'Blender'
+            'Blender',
+            'Octane'
           ]
         },
         {
@@ -136,5 +136,6 @@ export default {
 <style>
 #shader-view{
   width: 100%;
+  margin-top: -0.25em;
 }
 </style>

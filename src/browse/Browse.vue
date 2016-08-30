@@ -16,7 +16,6 @@ export default {
 
   data: () => {
     return {
-      msg: 'Hello Vue 2.0!'
     }
   }
 }
@@ -44,8 +43,7 @@ export default {
   padding: 0.5em;
   color: #c0c0c0;
 }
-#browse div{
-  padding: 0.5em;
+#browse>div{
   margin: 0.5em;
 }
 </style>

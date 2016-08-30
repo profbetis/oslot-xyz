@@ -103,17 +103,9 @@ export default {
   max-width: 16em;
 }
 
-div #filters{
-  padding: 0;
-}
-
 #filters .panel {
   background: #383838;
-}
-
-#filters div div div{
-  padding: 0;
-  margin: 0.5em 0;
+  padding: 0.5em 0;
 }
 
 #filters .filter-section{
